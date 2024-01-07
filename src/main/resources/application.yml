@@ -4,9 +4,9 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db_test
+    url: jdbc:mysql://localhost:3306/my_db
     username: root
-    password: root
+    password: wt20010828
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
@@ -19,7 +19,7 @@ spring:
     host: localhost
     database: 0
 server:
-  port: 7529
+  port: 7528
   servlet:
     context-path: /api
 mybatis-plus:
