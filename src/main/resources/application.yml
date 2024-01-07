@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: spring-init
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_test
+    username: root
+    password: root
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  session:
+    timeout: 86400
+    store-type: none
+
+  redis:
+    port: 6379
+    host: localhost
+    database: 0
+server:
+  port: 7529
+  servlet:
+    context-path: /api
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: isDelete #全局逻辑删除得实体字段名称（since 3.3.0）
+      logic-delete-value: 1  # 逻辑已删除值 （默认为 1 ）
+      logic-not-delete-value: 0 # 逻辑未删除值 （默认为 0 ）
